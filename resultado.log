@@ -1,0 +1,150 @@
+[2026-03-12 21:29:03] [ INFO ] [OdontologicaApplication:54] Starting OdontologicaApplication using Java 21.0.10 with PID 26120 (G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica\target\classes started by santi in G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica)
+[2026-03-12 21:29:03] [ DEBUG] [OdontologicaApplication:55] Running with Spring Boot v4.0.3, Spring v7.0.5
+[2026-03-12 21:29:03] [ INFO ] [OdontologicaApplication:652] No active profile set, falling back to 1 default profile: "default"
+[2026-03-12 21:29:05] [ INFO ] [RepositoryConfigurationDelegate:145] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-03-12 21:29:05] [ INFO ] [RepositoryConfigurationDelegate:213] Finished Spring Data repository scanning in 66 ms. Found 0 JPA repository interfaces.
+[2026-03-12 21:29:06] [ INFO ] [TomcatWebServer:114] Tomcat initialized with port 8080 (http)
+[2026-03-12 21:29:06] [ INFO ] [StandardService:168] Starting service [Tomcat]
+[2026-03-12 21:29:06] [ INFO ] [StandardEngine:168] Starting Servlet engine: [Apache Tomcat/11.0.18]
+[2026-03-12 21:29:07] [ INFO ] [WebApplicationContextInitializer:77] Root WebApplicationContext: initialization completed in 3644 ms
+[2026-03-12 21:29:07] [ INFO ] [jpa:102] HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-03-12 21:29:07] [ INFO ] [core:41] HHH000001: Hibernate ORM core version 7.2.4.Final
+[2026-03-12 21:29:09] [ INFO ] [SpringPersistenceUnitInfo:129] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-03-12 21:29:09] [ INFO ] [HikariDataSource:109] HikariPool-1 - Starting...
+[2026-03-12 21:29:09] [ INFO ] [HikariPool:580] HikariPool-1 - Added connection conn1: url=jdbc:h2:~/clinicaOdontologicaTest user=SA
+[2026-03-12 21:29:09] [ INFO ] [HikariDataSource:122] HikariPool-1 - Start completed.
+[2026-03-12 21:29:09] [ INFO ] [pooling:179] HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:~/clinicaOdontologicaTest]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CLINICAODONTOLOGICATEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-03-12 21:29:10] [ INFO ] [core:53] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-03-12 21:29:10] [ INFO ] [LocalContainerEntityManagerFactoryBean:464] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-03-12 21:29:10] [ WARN ] [JpaBaseConfiguration$JpaWebConfiguration:247] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-03-12 21:29:11] [ INFO ] [TomcatWebServer:240] Tomcat started on port 8080 (http) with context path '/'
+[2026-03-12 21:29:11] [ INFO ] [OdontologicaApplication:60] Started OdontologicaApplication in 9.764 seconds (process running for 11.379)
+[2026-03-12 21:29:16] [ INFO ] [[/]:168] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-03-12 21:29:16] [ INFO ] [DispatcherServlet:523] Initializing Servlet 'dispatcherServlet'
+[2026-03-12 21:29:16] [ INFO ] [DispatcherServlet:545] Completed initialization in 2 ms
+[2026-03-12 21:31:43] [ INFO ] [PacienteDAOH2:28] Guardando paciente: com.clinica.odontologica.model.Paciente@2e308bc5
+[2026-03-12 21:31:43] [ ERROR] [PacienteDAOH2:45] Error al guardar el paciente: Column "DOMICILIO" not found; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO) VALUES (?, ?, ?, ?, ?) [42122-240]
+[2026-03-12 21:31:55] [ INFO ] [PacienteDAOH2:28] Guardando paciente: com.clinica.odontologica.model.Paciente@285d21eb
+[2026-03-12 21:31:55] [ ERROR] [PacienteDAOH2:45] Error al guardar el paciente: Column "DOMICILIO" not found; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO) VALUES (?, ?, ?, ?, ?) [42122-240]
+[2026-03-12 21:32:32] [ INFO ] [OdontologicaApplication:54] Starting OdontologicaApplication using Java 21.0.10 with PID 16192 (G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica\target\classes started by santi in G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica)
+[2026-03-12 21:32:32] [ DEBUG] [OdontologicaApplication:55] Running with Spring Boot v4.0.3, Spring v7.0.5
+[2026-03-12 21:32:32] [ INFO ] [OdontologicaApplication:652] No active profile set, falling back to 1 default profile: "default"
+[2026-03-12 21:32:34] [ INFO ] [RepositoryConfigurationDelegate:145] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-03-12 21:32:34] [ INFO ] [RepositoryConfigurationDelegate:213] Finished Spring Data repository scanning in 66 ms. Found 0 JPA repository interfaces.
+[2026-03-12 21:32:35] [ INFO ] [TomcatWebServer:114] Tomcat initialized with port 8080 (http)
+[2026-03-12 21:32:36] [ INFO ] [StandardService:168] Starting service [Tomcat]
+[2026-03-12 21:32:36] [ INFO ] [StandardEngine:168] Starting Servlet engine: [Apache Tomcat/11.0.18]
+[2026-03-12 21:32:36] [ INFO ] [WebApplicationContextInitializer:77] Root WebApplicationContext: initialization completed in 3848 ms
+[2026-03-12 21:32:36] [ INFO ] [jpa:102] HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-03-12 21:32:36] [ INFO ] [core:41] HHH000001: Hibernate ORM core version 7.2.4.Final
+[2026-03-12 21:32:38] [ INFO ] [SpringPersistenceUnitInfo:129] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-03-12 21:32:38] [ INFO ] [HikariDataSource:109] HikariPool-1 - Starting...
+[2026-03-12 21:32:38] [ INFO ] [HikariPool:580] HikariPool-1 - Added connection conn1: url=jdbc:h2:~/clinicaOdontologicaTest user=SA
+[2026-03-12 21:32:38] [ INFO ] [HikariDataSource:122] HikariPool-1 - Start completed.
+[2026-03-12 21:32:38] [ INFO ] [pooling:179] HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:~/clinicaOdontologicaTest]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CLINICAODONTOLOGICATEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-03-12 21:32:39] [ INFO ] [core:53] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-03-12 21:32:39] [ INFO ] [LocalContainerEntityManagerFactoryBean:464] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-03-12 21:32:40] [ WARN ] [JpaBaseConfiguration$JpaWebConfiguration:247] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-03-12 21:32:41] [ INFO ] [TomcatWebServer:240] Tomcat started on port 8080 (http) with context path '/'
+[2026-03-12 21:32:41] [ INFO ] [OdontologicaApplication:60] Started OdontologicaApplication in 10.437 seconds (process running for 12.08)
+[2026-03-12 21:32:57] [ INFO ] [[/]:168] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-03-12 21:32:57] [ INFO ] [DispatcherServlet:523] Initializing Servlet 'dispatcherServlet'
+[2026-03-12 21:32:57] [ INFO ] [DispatcherServlet:545] Completed initialization in 2 ms
+[2026-03-12 21:33:10] [ INFO ] [OdontologicaApplication:54] Starting OdontologicaApplication using Java 21.0.10 with PID 27108 (G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica\target\classes started by santi in G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica)
+[2026-03-12 21:33:10] [ DEBUG] [OdontologicaApplication:55] Running with Spring Boot v4.0.3, Spring v7.0.5
+[2026-03-12 21:33:10] [ INFO ] [OdontologicaApplication:652] No active profile set, falling back to 1 default profile: "default"
+[2026-03-12 21:33:12] [ INFO ] [RepositoryConfigurationDelegate:145] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-03-12 21:33:12] [ INFO ] [RepositoryConfigurationDelegate:213] Finished Spring Data repository scanning in 53 ms. Found 0 JPA repository interfaces.
+[2026-03-12 21:33:13] [ INFO ] [TomcatWebServer:114] Tomcat initialized with port 8080 (http)
+[2026-03-12 21:33:13] [ INFO ] [StandardService:168] Starting service [Tomcat]
+[2026-03-12 21:33:13] [ INFO ] [StandardEngine:168] Starting Servlet engine: [Apache Tomcat/11.0.18]
+[2026-03-12 21:33:13] [ INFO ] [WebApplicationContextInitializer:77] Root WebApplicationContext: initialization completed in 2735 ms
+[2026-03-12 21:33:13] [ INFO ] [jpa:102] HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-03-12 21:33:13] [ INFO ] [core:41] HHH000001: Hibernate ORM core version 7.2.4.Final
+[2026-03-12 21:33:15] [ INFO ] [SpringPersistenceUnitInfo:129] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-03-12 21:33:15] [ INFO ] [HikariDataSource:109] HikariPool-1 - Starting...
+[2026-03-12 21:33:15] [ INFO ] [HikariPool:580] HikariPool-1 - Added connection conn1: url=jdbc:h2:~/clinicaOdontologicaTest user=SA
+[2026-03-12 21:33:15] [ INFO ] [HikariDataSource:122] HikariPool-1 - Start completed.
+[2026-03-12 21:33:15] [ INFO ] [pooling:179] HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:~/clinicaOdontologicaTest]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CLINICAODONTOLOGICATEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-03-12 21:33:16] [ INFO ] [core:53] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-03-12 21:33:16] [ INFO ] [LocalContainerEntityManagerFactoryBean:464] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-03-12 21:33:16] [ WARN ] [JpaBaseConfiguration$JpaWebConfiguration:247] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-03-12 21:33:17] [ INFO ] [TomcatWebServer:240] Tomcat started on port 8080 (http) with context path '/'
+[2026-03-12 21:33:17] [ INFO ] [OdontologicaApplication:60] Started OdontologicaApplication in 8.222 seconds (process running for 9.7)
+[2026-03-12 21:33:40] [ INFO ] [[/]:168] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-03-12 21:33:40] [ INFO ] [DispatcherServlet:523] Initializing Servlet 'dispatcherServlet'
+[2026-03-12 21:33:40] [ INFO ] [DispatcherServlet:545] Completed initialization in 3 ms
+[2026-03-12 21:34:41] [ INFO ] [PacienteDAOH2:28] Guardando paciente: com.clinica.odontologica.model.Paciente@807a5bf
+[2026-03-12 21:34:41] [ ERROR] [PacienteDAOH2:45] Error al guardar el paciente: Cannot invoke "java.lang.Integer.intValue()" because the return value of "com.clinica.odontologica.model.Domicilio.getId()" is null
+[2026-03-12 21:37:15] [ INFO ] [OdontologicaApplication:54] Starting OdontologicaApplication using Java 21.0.10 with PID 2524 (G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica\target\classes started by santi in G:\My Drive\UP\3\primer cuatri\APIs y microservicios\Odontologica)
+[2026-03-12 21:37:15] [ DEBUG] [OdontologicaApplication:55] Running with Spring Boot v4.0.3, Spring v7.0.5
+[2026-03-12 21:37:15] [ INFO ] [OdontologicaApplication:652] No active profile set, falling back to 1 default profile: "default"
+[2026-03-12 21:37:17] [ INFO ] [RepositoryConfigurationDelegate:145] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2026-03-12 21:37:17] [ INFO ] [RepositoryConfigurationDelegate:213] Finished Spring Data repository scanning in 51 ms. Found 0 JPA repository interfaces.
+[2026-03-12 21:37:18] [ INFO ] [TomcatWebServer:114] Tomcat initialized with port 8080 (http)
+[2026-03-12 21:37:18] [ INFO ] [StandardService:168] Starting service [Tomcat]
+[2026-03-12 21:37:18] [ INFO ] [StandardEngine:168] Starting Servlet engine: [Apache Tomcat/11.0.18]
+[2026-03-12 21:37:18] [ INFO ] [WebApplicationContextInitializer:77] Root WebApplicationContext: initialization completed in 2714 ms
+[2026-03-12 21:37:18] [ INFO ] [jpa:102] HHH008540: Processing PersistenceUnitInfo [name: default]
+[2026-03-12 21:37:18] [ INFO ] [core:41] HHH000001: Hibernate ORM core version 7.2.4.Final
+[2026-03-12 21:37:20] [ INFO ] [SpringPersistenceUnitInfo:129] No LoadTimeWeaver setup: ignoring JPA class transformer
+[2026-03-12 21:37:20] [ INFO ] [HikariDataSource:109] HikariPool-1 - Starting...
+[2026-03-12 21:37:20] [ INFO ] [HikariPool:580] HikariPool-1 - Added connection conn1: url=jdbc:h2:~/clinicaOdontologicaTest user=SA
+[2026-03-12 21:37:20] [ INFO ] [HikariDataSource:122] HikariPool-1 - Start completed.
+[2026-03-12 21:37:20] [ INFO ] [pooling:179] HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:~/clinicaOdontologicaTest]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: CLINICAODONTOLOGICATEST/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+[2026-03-12 21:37:21] [ INFO ] [core:53] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2026-03-12 21:37:21] [ INFO ] [LocalContainerEntityManagerFactoryBean:464] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2026-03-12 21:37:21] [ WARN ] [JpaBaseConfiguration$JpaWebConfiguration:247] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2026-03-12 21:37:22] [ INFO ] [TomcatWebServer:240] Tomcat started on port 8080 (http) with context path '/'
+[2026-03-12 21:37:22] [ INFO ] [OdontologicaApplication:60] Started OdontologicaApplication in 8.595 seconds (process running for 9.929)
+[2026-03-12 21:37:28] [ INFO ] [[/]:168] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-03-12 21:37:28] [ INFO ] [DispatcherServlet:523] Initializing Servlet 'dispatcherServlet'
+[2026-03-12 21:37:28] [ INFO ] [DispatcherServlet:545] Completed initialization in 2 ms
+[2026-03-12 21:38:54] [ INFO ] [PacienteDAOH2:28] Guardando paciente: com.clinica.odontologica.model.Paciente@70ac7ad
+[2026-03-12 21:38:54] [ INFO ] [PacienteDAOH2:42] Paciente guardado con ID: 2

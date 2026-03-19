@@ -1,0 +1,3 @@
+- Install postman
+- test endpoints (using postman and the file resultado.log)
+- list all patients
