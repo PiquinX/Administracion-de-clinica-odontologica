@@ -1,7 +1,9 @@
 package com.clinica.odontologica.service;
 
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.clinica.odontologica.Repository.PacienteRepository;
@@ -9,14 +11,15 @@ import com.clinica.odontologica.model.Paciente;
 
 @Service
 public class PacienteService {
+    @Autowired
     private PacienteRepository pacienteRepository;
 
     public Paciente registrarPaciente(Paciente paciente) {
         return pacienteRepository.save(paciente);
     }
 
-    public Paciente buscarPacientePorId(Integer id) {
-        return pacienteRepository.findById(id).get();
+    public Optional<Paciente> buscarPacientePorId(Integer id) {
+        return pacienteRepository.findById(id);
     }
 
     public void actualizarPaciente(Paciente paciente) {

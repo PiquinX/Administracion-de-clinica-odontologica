@@ -1,5 +1,24 @@
 package com.clinica.odontologica.model;
 
-public class Odontologo {
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Data;
 
+@Entity
+@Table(name = "odontologos")
+@Data
+public class Odontologo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    @Column
+    private String nombre;
+    @Column
+    private String apellido;
+    @Column
+    private String matricula;
 }

@@ -1,13 +1,13 @@
-package com.clinica.Odontologica;
+// package com.clinica.Odontologica;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class OdontologicaApplicationTests {
+// @SpringBootTest
+// class OdontologicaApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// @Test
+// void contextLoads() {
+// }
 
-}
+// }

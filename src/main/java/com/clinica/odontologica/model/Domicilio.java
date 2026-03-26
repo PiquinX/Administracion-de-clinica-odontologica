@@ -1,10 +1,25 @@
 package com.clinica.odontologica.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "domicilios")
 public class Domicilio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column
     private String calle;
+    @Column
     private Integer numero;
+    @Column
     private String localidad;
+    @Column
     private String provincia;
 
     // getters and setters

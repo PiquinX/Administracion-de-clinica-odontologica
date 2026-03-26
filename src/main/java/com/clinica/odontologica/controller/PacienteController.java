@@ -1,8 +1,10 @@
 package com.clinica.odontologica.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,28 +26,30 @@ public class PacienteController {
 
     // CRUD - to send data to the service
     @PostMapping
-    public Paciente registrarPaciente(@RequestBody Paciente paciente) {
+    public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente) {
         // here we can filter or add small defensive mechanisms
-        return pacienteService.registrarPaciente(paciente);
+        return ResponseEntity.ok(pacienteService.registrarPaciente(paciente));
     }
 
     @GetMapping("/{id}")
-    public Paciente buscarPaciente(@PathVariable Integer id) {
-        return pacienteService.buscarPacientePorId(id);
+    public ResponseEntity<Optional<Paciente>> buscarPaciente(@PathVariable Integer id) {
+        return ResponseEntity.ok(pacienteService.buscarPacientePorId(id));
     }
 
     @PutMapping
-    public void actualizarPaciente(Paciente paciente) {
+    public ResponseEntity<Void> actualizarPaciente(Paciente paciente) {
         pacienteService.actualizarPaciente(paciente);
+        return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/{id}")
-    public void eliminarPaciente(@PathVariable Integer id) {
+    public ResponseEntity<Void> eliminarPaciente(@PathVariable Integer id) {
         pacienteService.eliminarPaciente(id);
+        return ResponseEntity.ok().build();
     }
 
     @GetMapping
-    public List<Paciente> listarPacientes() {
-        return pacienteService.listarPacientes();
+    public ResponseEntity<List<Paciente>> listarPacientes() {
+        return ResponseEntity.ok(pacienteService.listarPacientes());
     }
 }
