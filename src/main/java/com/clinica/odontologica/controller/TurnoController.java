@@ -5,12 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.clinica.odontologica.model.Odontologo;
-import com.clinica.odontologica.model.Paciente;
 import com.clinica.odontologica.model.Turno;
 import com.clinica.odontologica.Dto.TurnoDTO;
-import com.clinica.odontologica.service.OdontologoService;
-import com.clinica.odontologica.service.PacienteService;
 import com.clinica.odontologica.service.TurnoService;
 
 import java.util.List;
@@ -22,18 +18,14 @@ public class TurnoController {
 
     @Autowired
     private TurnoService turnoService;
-    @Autowired
-    private PacienteService pacienteService;
-    @Autowired
-    private OdontologoService odontologoService;
 
     @PostMapping
-    public ResponseEntity<TurnoDTO> guardarTurno(@RequestBody Turno turno) {
+    public ResponseEntity<?> guardarTurno(@RequestBody Turno turno) {
         try {
             TurnoDTO turnoGuardado = turnoService.guardarTurno(turno);
             return ResponseEntity.ok(turnoGuardado);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 
@@ -59,12 +51,12 @@ public class TurnoController {
     }
 
     @PutMapping
-    public ResponseEntity<TurnoDTO> actualizarTurno(@RequestBody TurnoDTO turno) {
+    public ResponseEntity<?> actualizarTurno(@RequestBody TurnoDTO turno) {
         try {
             TurnoDTO turnoActualizado = turnoService.actualizarTurno(turno);
             return ResponseEntity.ok(turnoActualizado);
         } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
+            return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
 }

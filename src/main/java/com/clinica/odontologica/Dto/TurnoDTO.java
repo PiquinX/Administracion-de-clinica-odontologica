@@ -10,4 +10,6 @@ public class TurnoDTO {
     private Integer idPaciente;
     private Integer idOdontologo;
     private LocalDate fechaTurno;
+    private String observaciones;
+    private String estado;
 }

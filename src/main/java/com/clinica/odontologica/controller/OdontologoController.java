@@ -8,7 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.clinica.odontologica.model.Odontologo;
+import jakarta.validation.Valid;
+
+import com.clinica.odontologica.Dto.OdontologoRequestDTO;
+import com.clinica.odontologica.Dto.OdontologoResponseDTO;
 import com.clinica.odontologica.service.OdontologoService;
 
 @RestController
@@ -18,24 +21,24 @@ public class OdontologoController {
     private OdontologoService odontologoService;
 
     @PostMapping
-    public ResponseEntity<Odontologo> registrarOdontologo(@RequestBody Odontologo odontologo) {
-        return ResponseEntity.ok(odontologoService.registrarOdontologo(odontologo));
+    public ResponseEntity<OdontologoResponseDTO> registrarOdontologo(@Valid @RequestBody OdontologoRequestDTO dto) {
+        return ResponseEntity.ok(odontologoService.registrarOdontologo(dto));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscarOdontologoPorId(@PathVariable Integer id) {
-        Optional<Odontologo> odontologo = odontologoService.buscarOdontologoPorId(id);
-        if (odontologo.isPresent()) {
-            return ResponseEntity.ok(odontologo.get());
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
+    public ResponseEntity<OdontologoResponseDTO> buscarOdontologoPorId(@PathVariable Integer id) {
+        Optional<OdontologoResponseDTO> odontologo = odontologoService.buscarOdontologoPorId(id);
+        return odontologo.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
-    @PutMapping
-    public ResponseEntity<Odontologo> actualizarOdontologo(@RequestBody Odontologo odontologo) {
-        odontologoService.actualizarOdontologo(odontologo);
-        return ResponseEntity.ok(odontologo);
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizarOdontologo(@PathVariable Integer id, @Valid @RequestBody OdontologoRequestDTO dto) {
+        try {
+            return ResponseEntity.ok(odontologoService.actualizarOdontologo(id, dto));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -45,7 +48,7 @@ public class OdontologoController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Odontologo>> listarOdontologos() {
+    public ResponseEntity<List<OdontologoResponseDTO>> listarOdontologos() {
         return ResponseEntity.ok(odontologoService.listarOdontologos());
     }
 }

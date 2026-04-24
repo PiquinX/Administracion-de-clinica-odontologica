@@ -36,8 +36,8 @@ public class DB {
         Connection connection = null;
         try {
             connection = getConnection();
-            connection.createStatement().execute(SQL_DROP_CREATE_DOMICILIOS);
             connection.createStatement().execute(SQL_DROP_CREATE_PACIENTES);
+            connection.createStatement().execute(SQL_DROP_CREATE_DOMICILIOS);
             connection.createStatement().execute(SQL_Prueba);
             System.out.println("Tablas creadas exitosamente");
         } catch (Exception e) {

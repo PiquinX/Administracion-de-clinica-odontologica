@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,32 +15,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.clinica.odontologica.model.Paciente;
+import com.clinica.odontologica.Dto.PacienteRequestDTO;
+import com.clinica.odontologica.Dto.PacienteResponseDTO;
 import com.clinica.odontologica.service.PacienteService;
 
-//This allows us to interact with the view and the service
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api-paciente")
 public class PacienteController {
     @Autowired
     private PacienteService pacienteService;
 
-    // CRUD - to send data to the service
     @PostMapping
-    public ResponseEntity<Paciente> registrarPaciente(@RequestBody Paciente paciente) {
-        // here we can filter or add small defensive mechanisms
-        return ResponseEntity.ok(pacienteService.registrarPaciente(paciente));
+    public ResponseEntity<PacienteResponseDTO> registrarPaciente(@Valid @RequestBody PacienteRequestDTO dto) {
+
+        PacienteResponseDTO pacienteResponseDTO = pacienteService.registrarPaciente(dto);
+        return new ResponseEntity<>(pacienteResponseDTO, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Paciente>> buscarPaciente(@PathVariable Integer id) {
-        return ResponseEntity.ok(pacienteService.buscarPacientePorId(id));
+    public ResponseEntity<PacienteResponseDTO> buscarPaciente(@PathVariable Integer id) {
+        Optional<PacienteResponseDTO> paciente = pacienteService.buscarPacientePorId(id);
+
+        if (paciente.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+        return new ResponseEntity<>(paciente.get(), HttpStatus.ACCEPTED);
     }
 
-    @PutMapping
-    public ResponseEntity<Void> actualizarPaciente(Paciente paciente) {
-        pacienteService.actualizarPaciente(paciente);
-        return ResponseEntity.ok().build();
+    @PutMapping("/{id}")
+    public ResponseEntity<?> actualizarPaciente(@PathVariable Integer id, @Valid @RequestBody PacienteRequestDTO dto) {
+        try {
+            return ResponseEntity.ok(pacienteService.actualizarPaciente(id, dto));
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @DeleteMapping("/{id}")
@@ -49,7 +60,7 @@ public class PacienteController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Paciente>> listarPacientes() {
+    public ResponseEntity<List<PacienteResponseDTO>> listarPacientes() {
         return ResponseEntity.ok(pacienteService.listarPacientes());
     }
 }
